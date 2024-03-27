@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block main %}
+<div class="mains" id="mains"></div>
+<div class="get" >
+<section class="sec1_main" id="sec1_main">
+   
+</section>
+<section class="sec15_main" id="sec15_main">
+   
+</section>
+</div>
+<section class="section2_main">
+
+    <div class="cards acard">
+        <img src="{{ article.img.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title colorwi" style="font-size: 50px!important;">{{ article.title }}</h5>
+          <p class="card-text colorwi"  style="font-size: 30px!important;">{{ article.anons }}</p>
+          <p class="card-text colorwi"  style="font-size: 20px!important;">{{ article.full_text_ru }}</p>
+
+          <p style="margin-top: 15px;">
+          <span class="card-author colorwi">Написан(-а) {{ article.author }}</span>
+          <span class="card-date colorwi">{{ article.date }}</span>
+          </p>
+        </div>
+      </div>
+</section>
+
+<section class="sec3_main">
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

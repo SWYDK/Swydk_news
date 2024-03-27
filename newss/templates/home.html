@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block main %}
+<div class="mains" id="mains"></div>
+<div class="get" >
+<section class="sec1_main" id="sec1_main">
+   
+</section>
+<section class="sec15_main" id="sec15_main">
+   
+</section>
+</div>
+<section class="section2_main">
+    
+
+    <div class="wrap">
+        <div class="search">
+          <form class="d-flex" role="search" style="width: 100vw;" action="{% url 'home' %}">
+            <input type="text" class="searchTerm" name="search" type="text" placeholder="Поиск">
+            <button type="submit" class="searchButton">
+                <span class="material-symbols-outlined">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg>
+                </span>
+            </button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="none">
+      <p class="nonep">{{ isNone }}</p>
+    </div>
+    <div class="projph">
+
+      {% for el in news1 %}
+      <div class="card">
+        <img src="{{ el.img }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ el.title }}</h5>
+          <p class="card-text">{{ el.anons }}</p>
+          <a href="{% url 'article' article_id=el.id %}" class="btn btn-primary" id="bcblack">Подробнее</a>
+          <p style="margin-top: 15px;">
+          <span class="card-author">{{ el.author }}</span>
+          <span class="card-date">{{ el.date }}</span>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+   
+   
+    
+</div>
+    <a href="#" class="containers" id="more"><button class="btn btn-light" id="more"><a href="#mains" style="text-decoration: none; color: black;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+      </svg></a></button></a>
+
+
+
+
+
+</section>
+
+<section class="sec3_main">
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
